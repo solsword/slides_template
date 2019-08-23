@@ -1,0 +1,175 @@
+:root {
+  --important-color: #e42;
+  --important-link-color: #f84;
+  --important-link-hover: #d62;
+  --standout-color: #037;
+}
+
+h1 {
+  font-size: 32pt;
+}
+
+.reveal pre, .reveal code {
+  font-size: 90%;
+}
+
+.reveal .sourceCode {
+  font-size: 95%;
+}
+
+.reveal sup {
+  font-size: 1ex;
+}
+
+.reveal sub {
+  font-size: 1ex;
+}
+
+.wide-table table {
+  width: 100%;
+}
+
+.empty-table tbody th img, .empty-table tbody td img {
+  margin: 0px;
+}
+
+.empty-table tbody th, .empty-table tbody td {
+  border: 0px !important;
+  padding: 0.4ex 1ex 0.4ex 1ex;
+  vertical-align: middle;
+}
+
+.crossout {
+  text-decoration: line-through;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.standout {
+  color: var(--standout-color);
+}
+
+.important {
+  color: var(--important-color);
+}
+
+.important a {
+  color: var(--important-link-color) !important;
+}
+
+.important a:hover {
+  color: var(--important-link-hover) !important;
+}
+
+.reveal .small {
+  font-size: 80%;
+}
+
+.reveal .attribution {
+  font-size: 0.6em;
+}
+
+.fullframe {
+  width: 100%;
+  height: 17em;
+}
+
+.fullframe figure {
+  width: 100%;
+  height: 100%;
+}
+
+.fullframe figure img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  height: 100% !important;
+  width: auto !important;
+}
+
+.bigframe {
+  width: 100%;
+  height: 14em;
+}
+
+.medframe {
+  width: 80%;
+  height: 10em;
+}
+
+.bigframe figure, .medframe figure {
+  width: 100%;
+  height: 100%;
+}
+
+.bigframe figure img, .medframe figure img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  height: 100% !important;
+  width: auto !important;
+}
+
+.reveal section div.img-no-border img {
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@media print {
+  .reveal section.level1 {
+    display: none !important;
+  }
+}
+
+.reveal .fraction {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  top: -1.3ex;
+  height: 2.7ex;
+}
+
+.reveal .fraction-top {
+  display: inline-block;
+  float: left;
+  border-bottom: 1pt solid black;
+  padding-bottom: 1pt;
+}
+
+.reveal .fraction-bottom {
+  display: inline-block;
+  clear: left;
+  float: left;
+}
+
+.reveal .equation {
+  margin: 0 auto 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.reveal .columns {
+  width: 100%;
+  margin: auto;
+  clear: both;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.reveal .columns.top {
+  align-items: flex-start;
+}
+
+.reveal .columns.bottom {
+  align-items: flex-end;
+}
+
+.reveal .columns.stretch {
+  align-items: stretch;
+}

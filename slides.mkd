@@ -1,0 +1,180 @@
+% Example Slides
+% Peter Mawhorter
+% August 22, 2019
+
+# Track 1
+
+## Numbered List
+
+1. Regression (math)
+2. Simulation (biology)
+3. Algorithms (computer science)
+
+## Bulleted list
+
+- A regression problem seeks to minimize error.
+    * Choice of function is important.
+- Neural networks ⇒ general nonlinear regression.
+- Linear algebra (matrix multiplication & derivatives).
+
+## Font options
+
+- **Bold**, *italics*, `fixed-width`, [strikethrough]{.crossout}, and [Small Caps]{.smallcaps}.
+- [A secondary color]{.standout} different from the [link color](#) is also available.
+- Plus a bright color for [important]{.important} things.
+
+```python
+def some(code):
+    in = this.box
+    it(is, highlighted)
+    return (3 + 4*5), "A string"
+```
+
+## Use color for questions
+
+- This slide demonstrates the use of the standout color.
+- First, there are several bullet points.
+- Below, there is a question for the audience.
+
+[Do you think that this standaout color is a good one?]{.standout}
+
+## Images
+
+- Include a proper attribution and link.
+- *Always* include an alternate text.
+- Space at end prevents it from being a figure.
+
+![A neuron](res/neuron.svg){height=180 style="padding:20pt;"}\ 
+
+[
+From [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1474927) by [Dhp1080](https://en.wikipedia.org/wiki/User:Dhp1080), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+]{.attribution}
+
+## Fragments
+
+> - The text on this slide
+> - Will appear one line at a time
+> - And anything can be made to appear in order
+
+[By putting it in a `.fragment` container like this.]{.fragment}
+
+
+# Track 2
+
+---
+
+This slide has an embedded video in it. It doesn't have a title.
+
+<iframe class="medframe" src="https://www.youtube.com/embed/pfFyZY1RPZU?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+[
+[https://www.youtube.com/watch?pfFyZY1RPZU](https://www.youtube.com/watch?pfFyZY1RPZU)
+]{.small}
+
+---
+
+This slide embeds another web page.
+
+<iframe class="medframe" src="https://karpathy.github.io/2015/05/21/rnn-effectiveness/" frameborder="0"></iframe>
+
+[
+[https://karpathy.github.io/2015/05/21/rnn-effectiveness/](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+]{.small}
+
+## Slide Title
+
+This slide uses some blank spaces...
+
+\ 
+
+...to add whitespace to the slide.
+
+\ 
+
+
+# Track 3
+
+## Multiple columns
+
+<div class="columns">
+<div style="width: 60%">
+- This column is a bit wider than the other one.
+- Vertical alignment centers each column separately by default.
+- Use `.top`, `.bottom`, or `.stretch` classes in addition to `.column` to
+  control vertical alignment.
+</div>
+<div>
+![([from Twitter](https://twitter.com/goodfellow_ian/status/937406530743287808?s=15))](https://pbs.twimg.com/media/DQJWAk5UEAEkR1b.jpg)
+</div>
+</div>
+
+## Formulae
+
+- LaTeX via pandoc/MathJax magic:
+
+$$ \text{axon signal} = \sum_{\text{dendrite}}{\text{dendrite activation}} $$
+
+$$ y = \sum_{i}{w_i \cdot x_i} $$
+
+## Formula w/ Image
+
+<div class="columns">
+$$ f(x) = \frac{1}{1 + e^{-kx}} $$
+
+![A sigmoid function](res/sigmoid.svg){height=9em}
+</div>
+
+## Complex Formula:
+
+$$ y_j = f(\sum_{i}{w_{i,j} \cdot x_i}) $$
+
+$$ \left[ \begin{matrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_m
+\end{matrix} \right] =  f \left( \left[ \begin{matrix}
+w_{1,1} & w_{2,1} & \cdots & w_{n,1}\\
+w_{1,2} & w_{2,2} & \cdots & w_{n,2}\\
+\vdots  & \vdots & \ddots & \vdots \\
+w_{1,m} & w_{2,m} & \cdots & w_{n,m}\\
+\end{matrix} \right]
+\cdot
+\left[ \begin{matrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{matrix} \right] \right)$$
+
+
+# Track 4
+
+## An Explicit Table
+
+<table>
+<tr style="border: 0pt;">
+<td>Input ($x$)</td> <td>Output ($y$)</td> <td>\ \ \ </td>
+<td>Input ($x$)</td> <td>Output ($y$)</td>
+</tr>
+<tr style="border: 0pt; height: 140px;">
+
+<td style="height: 140px;">![A cat](res/cat.jpg){style="height:120px"}</td>
+<td style="vertical-align:middle;">[1, 0]</td>
+
+<td></td>
+
+<td style="height: 140px;">![A dog](res/dog.jpg){style="height:120px"}</td>
+<td style="vertical-align:middle;">[0, 1]</td>
+
+</tr>
+</table>
+
+## Block Quote
+
+<!-- Note: div here ends up expanding width of block quote to help with word wrapping -->
+<div style="width: 110%;">
+> We live in capitalism. Its power seems inescapable. So did the divine right of kings. Any human power can be resisted and changed by human beings. Resistance and change often begin in art, and very often in our art, the art of words.
+</div>
+
+[- Ursula K. Le Guin]{style="float: right;"}
