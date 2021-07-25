@@ -173,3 +173,7 @@ h1 {
 .reveal .columns.stretch {
   align-items: stretch;
 }
+
+input, textarea {
+  font-size: 22pt;
+}

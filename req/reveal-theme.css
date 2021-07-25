@@ -24,7 +24,7 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-body {
+body.reveal-viewport {
   background: var(--bg-top);
   background-color: var(--bg-top);
   background: linear-gradient(to bottom, var(--bg-top), var(--bg-bot));
