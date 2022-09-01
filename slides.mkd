@@ -1,180 +1,236 @@
-% Example Slides
-% Peter Mawhorter
-% August 22, 2019
+% Representing Exploration
+% Peter Mawhorter, Indira Ruslanova, and Ross Mawhorter
+% August 31, 2022
 
-# Track 1
+# Acknowledgement
 
-## Numbered List
+##
 
-1. Regression (math)
-2. Simulation (biology)
-3. Algorithms (computer science)
+This work was done on land stolen from the Massachusett, Wampanoag,
+Nipmuck, Uypi, Amah Mutsun, and Chumash peoples, and the authors are
+grateful for their stewardship of that land in the past, in the present,
+and in the future. The history of this land is important because this
+work could not have happened without its use. We acknowledge that we
+directly benefit from this ongoing injustice.
 
-## Bulleted list
+# Background
 
-- A regression problem seeks to minimize error.
-    * Choice of function is important.
-- Neural networks ⇒ general nonlinear regression.
-- Linear algebra (matrix multiplication & derivatives).
-
-## Font options
-
-- **Bold**, *italics*, `fixed-width`, [strikethrough]{.crossout}, and [Small Caps]{.smallcaps}.
-- [A secondary color]{.standout} different from the [link color](#) is also available.
-- Plus a bright color for [important]{.important} things.
-
-```python
-def some(code):
-    in = this.box
-    it(is, highlighted)
-    return (3 + 4*5), "A string"
-```
-
-## Use color for questions
-
-- This slide demonstrates the use of the standout color.
-- First, there are several bullet points.
-- Below, there is a question for the audience.
-
-[Do you think that this standaout color is a good one?]{.standout}
-
-## Images
-
-- Include a proper attribution and link.
-- *Always* include an alternate text.
-- Space at end prevents it from being a figure.
-
-![A neuron](res/neuron.svg){height=180 style="padding:20pt;"}\ 
-
-[
-From [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1474927) by [Dhp1080](https://en.wikipedia.org/wiki/User:Dhp1080), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
-]{.attribution}
-
-## Fragments
-
-> - The text on this slide
-> - Will appear one line at a time
-> - And anything can be made to appear in order
-
-[By putting it in a `.fragment` container like this.]{.fragment}
-
-
-# Track 2
-
----
-
-This slide has an embedded video in it. It doesn't have a title.
-
-<iframe class="medframe" src="https://www.youtube.com/embed/pfFyZY1RPZU?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-[
-[https://www.youtube.com/watch?pfFyZY1RPZU](https://www.youtube.com/watch?pfFyZY1RPZU)
-]{.small}
-
----
-
-This slide embeds another web page.
-
-<iframe class="medframe" src="https://karpathy.github.io/2015/05/21/rnn-effectiveness/" frameborder="0"></iframe>
-
-[
-[https://karpathy.github.io/2015/05/21/rnn-effectiveness/](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-]{.small}
-
-## Slide Title
-
-This slide uses some blank spaces...
-
-\ 
-
-...to add whitespace to the slide.
-
-\ 
-
-
-# Track 3
-
-## Multiple columns
+## Exploration Design
 
 <div class="columns">
 <div style="width: 60%">
-- This column is a bit wider than the other one.
-- Vertical alignment centers each column separately by default.
-- Use `.top`, `.bottom`, or `.stretch` classes in addition to `.column` to
-  control vertical alignment.
+![<span class="small">Exploring Sable (2021)</span><br><span class="attribution">[from XboxAchievements.com](https://www.xboxachievements.com/game/sable/screenshots/)</span>](res/sable-exploration.webp)
 </div>
-<div>
-![([from Twitter](https://twitter.com/goodfellow_ian/status/937406530743287808?s=15))](https://pbs.twimg.com/media/DQJWAk5UEAEkR1b.jpg)
+<div style="width: 40%">
+- Exploration is a core part of many games
+- Spaces shape choices
+- Experience can be good or bad...
 </div>
 </div>
 
-## Formulae
+## Long-term Research Goals
 
-- LaTeX via pandoc/MathJax magic:
+- Develop a theory of 'exploration poetics'
+    * Develop formal language
+    * Identify design patterns
+    * Create methods for analysis
+- Quantify exploration with metrics
+    * E.g., "unexplored option count"
+    * Potentially useful for PCG
 
-$$ \text{axon signal} = \sum_{\text{dendrite}}{\text{dendrite activation}} $$
+## Representing Exploration
 
-$$ y = \sum_{i}{w_i \cdot x_i} $$
+- Human cognitive structures
+    * Pairwise spatial relations
+    * 2+D maps
+    * Routes + landmarks
+- A sequential decision-making process
+    * Affordances as observed are important
 
-## Formula w/ Image
+<span class="attribution">See Peer, et al. 2021 "Structuring Knowledge with
+Cognitive Maps and Cognitive Graphs."</span>
+
+## Metroidvanias
 
 <div class="columns">
-$$ f(x) = \frac{1}{1 + e^{-kx}} $$
-
-![A sigmoid function](res/sigmoid.svg){height=9em}
+<div style="width: 60%">
+![<span class="small">Super Metroid (1994) map screen</span>](res/metroid-map.png)
+</div>
+<div style="width: 40%">
+- Exploration as a key mechanic
+- Discrete rooms present predictable affordances
+- Map systems foreground exploration
+</div>
 </div>
 
-## Complex Formula:
+# Example
 
-$$ y_j = f(\sum_{i}{w_{i,j} \cdot x_i}) $$
+## Super Metroid
 
-$$ \left[ \begin{matrix}
-y_1 \\
-y_2 \\
-\vdots \\
-y_m
-\end{matrix} \right] =  f \left( \left[ \begin{matrix}
-w_{1,1} & w_{2,1} & \cdots & w_{n,1}\\
-w_{1,2} & w_{2,2} & \cdots & w_{n,2}\\
-\vdots  & \vdots & \ddots & \vdots \\
-w_{1,m} & w_{2,m} & \cdots & w_{n,m}\\
-\end{matrix} \right]
-\cdot
-\left[ \begin{matrix}
-x_1 \\
-x_2 \\
-\vdots \\
-x_n
-\end{matrix} \right] \right)$$
-
-
-# Track 4
-
-## An Explicit Table
-
-<table>
-<tr style="border: 0pt;">
-<td>Input ($x$)</td> <td>Output ($y$)</td> <td>\ \ \ </td>
-<td>Input ($x$)</td> <td>Output ($y$)</td>
-</tr>
-<tr style="border: 0pt; height: 140px;">
-
-<td style="height: 140px;">![A cat](res/cat.jpg){style="height:120px"}</td>
-<td style="vertical-align:middle;">[1, 0]</td>
-
-<td></td>
-
-<td style="height: 140px;">![A dog](res/dog.jpg){style="height:120px"}</td>
-<td style="vertical-align:middle;">[0, 1]</td>
-
-</tr>
-</table>
-
-## Block Quote
-
-<!-- Note: div here ends up expanding width of block quote to help with word wrapping -->
-<div style="width: 110%;">
-> We live in capitalism. Its power seems inescapable. So did the divine right of kings. Any human power can be resisted and changed by human beings. Resistance and change often begin in art, and very often in our art, the art of words.
+<div class="columns">
+<div style="width: 50%">
+![<span class="small">Exploring Super Metroid (1994)</span>](res/metroid_exploration.mp4){width=100% alt="A video showing an exploration process for the first two rooms of Super Metroid after Ceres Station. At the start, the avatar is on top of a ship, with nothing visible around it. After choosing to go right, the avatar falls off the ship onto bumpy ground, and continues right until they come to a cliff, with a tunnel beneath it clogged with blocks. The avatar then progresses left until they come to a blue barrier set into a cave entrance. After shooting it it opens, and going inside loads another room. In this room (the 'cave') we first pass by two narrow tunnels downwards, the first of which is also blocked by rocks. Both are too short to enter. Further left, there is a gap in the floor, and some rocks blocking the way left. Jumping over the gap and shooting the rocks proves ineffective, so the avatar jumps into the floor gap, at which point the camera scrolls down and the avatar begins to fall from ledge to ledge. At the end of the video, the avatar lands on a ledge across from another blue door, although this one is blocked with another too-short gap in front of it."}
+</div>
+<div style="width: 50%" class="top">
+![A graph of decisions from the video on the previous slide. There are
+five named decisions: 'on ship' for the start, 'cliff' for the cliff to
+the right, 'cave entrance' for before the door, 'cave' for the top part
+of the room on the other side of the door, and 'cave ledge' for the ledge
+at the end of the video next to the blocked door. The 'cliff' and 'cave
+ledge' decisions each connect to two unexplored nodes, while the 'cave'
+decision connects to three. All connections are
+bi-directional.](res/sm_start.svg){style="position: absolute; left: 50%; top: 17%; width: 45%;" .fragment
+.fade-in data-fragment-index="1"}\ 
+<ul class="fragment fade-out" data-fragment-index="1">
+<li>Two major decisions<br>(several minor ones)</li>
+<li>Dead ends and blocked choices</li>
+<li>Feels constrained</li>
+<li>Areas will open up later</li>
+</ul>
+</div>
 </div>
 
-[- Ursula K. Le Guin]{style="float: right;"}
+
+# The `exploration` Library
+
+## Library Info
+
+- Open source (BSD 3-clause)
+- Python library (3.x; tested on 3.10)
+- Available as `exploration` on PyPI
+- Builds on the popular open-source `networkx` graph library
+- Current version is 0.1.2 (alpha phase)
+
+## `DecisionGraph`s
+
+- A **directed** **multi-graph** with **self-links**
+- Both nodes (**decisions**) and edges (**transitions**) are named
+    * Transition names must be unique per node
+- Transitions can have **requirements** and/or **effects**
+    * *Tokens* and/or *powers* required/granted
+    * Transitions have explicit reciprocals
+
+## `DecisionGraph`s
+
+- Decisions and transitions can store tags and annotations
+- Unexplored areas are represented as tagged decisions
+- Decisions assigned to one or more zones for grouping
+    * Zones can contain other zones too
+
+## `Exploration` Objects
+
+- A sequence of `DecisionGraph`s
+    * Records **decision** made + **transition** taken at each step
+    * Also tracks *tokens* and *powers* as part of game state
+- Methods for adding to current graph or advancing via a transition
+    * Can also wait or warp
+    * Arbitrary additional game state can be tracked
+
+## Journal Conversion
+
+- Not finished in v0.1.2
+- Converts text-based journal format into an `Exploration`
+    * Streamlines stuff by remembering defaults, e.g., if an entry point
+      is omitted on revisit it can be deduced
+- Current protocol for recording exploration involves transcribing a
+  recorded play session into this format
+
+
+# Code Example
+
+## The Graph
+
+![A graph of decisions from the video on the previous slide. There are
+five named decisions: 'on ship' for the start, 'cliff' for the cliff to
+the right, 'cave entrance' for before the door, 'cave' for the top part
+of the room on the other side of the door, and 'cave ledge' for the ledge
+at the end of the video next to the blocked door. The 'cliff' and 'cave
+ledge' decisions each connect to two unexplored nodes, while the 'cave'
+decision connects to three. All connections are
+bi-directional.](res/sm_start.svg)\ 
+
+## The Code
+
+```{.sourceCode .py .smallCode}
+# Create first two decisions
+e = core.Exploration()
+e.start('on ship', ['left', 'right'])
+e.explore('right', 'cliff', ['up cliff', 'through tunnel'], 'to ship')
+# Add requirements to cliff options we can't take yet
+g = e.currentGraph()
+g.setTransitionRequirement('cliff', 'up cliff', 'high_jump')
+g.setTransitionRequirement('cliff', 'through tunnel', 'breaker')
+```
+
+## The Code (part 2)
+
+```{.sourceCode .py .smallCode}
+# Add decision point before door
+e.retrace('to ship')
+e.explore('left', 'cave entrance', ['through door'], 'to ship')
+# Add decision point for top room
+e.explore('through door', 'cave',
+          ['down blocked', 'down short', 'left', 'down pit'],
+          'door to outside')
+```
+
+## The Code (part 3)
+
+```{.sourceCode .py .smallCode}
+# Set some requirements
+g = e.currentGraph()
+g.setTransitionRequirement('cave', 'down blocked', 'crawl&breaker')
+g.setTransitionRequirement('cave', 'down short', 'crawl')
+g.setTransitionRequirement('cave', 'left', 'breaker')
+# Explore down to the first ledge where a door is visible
+e.explore('down pit', 'cave ledge', ['down', 'recessed door'], 'up')
+# Set requirement for the door
+g = e.currentGraph()
+g.setTransitionRequirement('cave ledge', 'recessed door', 'crawl')
+```
+
+
+# Future Plans
+
+## Journal Format
+
+- Needs to be finalized and tested
+- Will be refined with use
+
+## Representing Open Spaces
+
+- How will decision graphs hold up in open-world games?
+- Can we do something better, or augment decision graphs?
+
+## Metrics
+
+- E.g., "number-of-unexplored doors at each step"
+- Given examples, look for patterns
+- Can we reliably infer level design idioms from metrics?
+
+## PCG Applications
+
+- If there's a metric, we can evolve it...
+- Could develop AI to generate human-like explorations of novel spaces
+- Ideally, run user studies to establish relationships between metrics +
+  player experience aspects, then use metrics for PCG without needing as
+  many user studies.
+- More axes for Q/D charts? :P
+
+
+# Discussion
+
+## Representing Space
+
+- Graph-based vs. grid-based representation of space?
+    * How will it translate to other genres?
+
+## Decision Graphs
+
+- Is a multi-di-graph the right format?
+    * How could/should spatial relations be annotated?
+
+## Graph Sequences
+
+- Could 'trace-in-a-single-graph' work instead?
+- Are there things that graph-sequence will have trouble with?

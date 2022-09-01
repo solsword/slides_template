@@ -1,7 +1,7 @@
 :root {
-  --important-color: #e42;
-  --important-link-color: #f84;
-  --important-link-hover: #d62;
+  --important-color: #e24;
+  --important-link-color: #f48;
+  --important-link-hover: #d26;
   --standout-color: #037;
 }
 
@@ -15,6 +15,10 @@ h1 {
 
 .reveal .sourceCode {
   font-size: 95%;
+}
+
+.reveal .smallCode .sourceCode {
+  font-size: 65%;
 }
 
 .reveal sup {

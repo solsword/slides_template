@@ -9,14 +9,14 @@
   line-height: 1.3em; }
 
 :root {
-  --bg-top: #fff8e0;
-  --bg-bot: #ffe8b0;
-  --text: #000;
+  --bg-top: #ffe0f8;
+  --bg-bot: #ffb0e8;
+  --text: #201;
   --sel-fg: #fff;
   --sel-bg: #26351c;
-  --title-text: #4a2311;
-  --link-text: #a63;
-  --link-hover: #fa6;
+  --title-text: #4a1123;
+  --link-text: #a36;
+  --link-hover: #f6a;
   --img-bg: #fff;
   --img-border: #000;
 }
@@ -127,6 +127,11 @@ body.reveal-viewport {
   display: block;
   margin-left: 40px;
   font-size: 95%; }
+
+.reveal ul li,
+.reveal dl li,
+.reveal ol li {
+  margin: 0pt 0pt 6pt 0pt; }
 
 .reveal dt {
   font-weight: bold; }
